@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IanOon Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">IanOon</div>
+        <ul class="nav-links">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="gallery.html" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Gallery
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+                    <li><a class="dropdown-item" href="gallery.html#city">City</a></li>
+                    <li><a class="dropdown-item" href="gallery.html#event">Event</a></li>
+                    <li><a class="dropdown-item" href="gallery.html#flower">Flower</a></li>
+                    <li><a class="dropdown-item" href="gallery.html#food">Food</a></li>
+                    <li><a class="dropdown-item" href="gallery.html#landscape">Landscape</a></li>
+                    <li><a class="dropdown-item" href="gallery.html#penang">Penang</a></li>
+                    <li><a class="dropdown-item" href="gallery.html#studio">Studio</a></li>
+                    <li><a class="dropdown-item" href="gallery.html#editedphotoshop">Edited / Photoshop</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Capturing Moments</h1>
+            <p class="tagline">IanOon Photography</p>
+        </div>
+    </header>
+
+    <!-- City Section: Photo Left, Text Right -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <img src="city_images/city1.jpg" alt="City Photo" class="img-fluid rounded shadow" draggable="false" oncontextmenu="return false;">
+                </div>
+                <div class="col-md-6">
+                    <h2>City</h2>
+                    <p>Urban landscapes and city life, capturing the energy and architecture of metropolitan spaces.</p>
+                    <a href="gallery.html#city" class="btn btn-dark">View City</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Section: Photo Right, Text Left -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5 flex-md-row-reverse">
+                <div class="col-md-6">
+                    <img src="event_images/event1.jpg" alt="Event Photo" class="img-fluid rounded shadow" draggable="false" oncontextmenu="return false;">
+                </div>
+                <div class="col-md-6">
+                    <h2>Event</h2>
+                    <p>Memorable moments from special occasions, celebrations, and gatherings.</p>
+                    <a href="gallery.html#event" class="btn btn-dark">View Events</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flower Section: Photo Left, Text Right -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <img src="flower_images/flower1.jpg" alt="Flower Photo" class="img-fluid rounded shadow" draggable="false" oncontextmenu="return false;">
+                </div>
+                <div class="col-md-6">
+                    <h2>Flower</h2>
+                    <p>Delicate beauty and vibrant colors of flowers, captured in stunning detail.</p>
+                    <a href="gallery.html#flower" class="btn btn-dark">View Flowers</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Section: Photo Right, Text Left -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5 flex-md-row-reverse">
+                <div class="col-md-6">
+                    <img src="food_images/food1.jpg" alt="Food Photo" class="img-fluid rounded shadow" draggable="false" oncontextmenu="return false;">
+                </div>
+                <div class="col-md-6">
+                    <h2>Food</h2>
+                    <p>Delicious food photography that makes every dish look irresistible and mouth-watering.</p>
+                    <a href="gallery.html#food" class="btn btn-dark">View Food</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landscape Section: Photo Left, Text Right -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <img src="landscape_images/landscape1.jpg" alt="Landscape Photo" class="img-fluid rounded shadow" draggable="false" oncontextmenu="return false;">
+                </div>
+                <div class="col-md-6">
+                    <h2>Landscape</h2>
+                    <p>Breathtaking landscapes from around the world. Explore the beauty of nature through my lens.</p>
+                    <a href="gallery.html#landscape" class="btn btn-dark">View Landscapes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Penang Section: Photo Right, Text Left -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5 flex-md-row-reverse">
+                <div class="col-md-6">
+                    <img src="penang_images/penang1.jpg" alt="Penang Photo" class="img-fluid rounded shadow" draggable="false" oncontextmenu="return false;">
+                </div>
+                <div class="col-md-6">
+                    <h2>Penang</h2>
+                    <p>Scenes and stories from Penang, showcasing its unique culture and beauty.</p>
+                    <a href="gallery.html#penang" class="btn btn-dark">View Penang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Section: Photo Left, Text Right -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <img src="studio_images/studio1.jpg" alt="Studio Photo" class="img-fluid rounded shadow" draggable="false" oncontextmenu="return false;">
+                </div>
+                <div class="col-md-6">
+                    <h2>Studio</h2>
+                    <p>Professional studio portraits and creative shoots, highlighting personality and style.</p>
+                    <a href="gallery.html#studio" class="btn btn-dark">View Studio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edited Photoshop Section: Photo Right, Text Left -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5 flex-md-row-reverse">
+                <div class="col-md-6">
+                    <img src="edited_images/edited1.jpg" alt="Edited Photoshop Photo" class="img-fluid rounded shadow" draggable="false" oncontextmenu="return false;">
+                </div>
+                <div class="col-md-6">
+                    <h2>Edited / Photoshop</h2>
+                    <p>Creative edits and Photoshop artwork, transforming photos into unique visual stories.</p>
+                    <a href="gallery.html#editedphotoshop" class="btn btn-dark">View Edited</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section: Instagram Only -->
+    <section id="contact" class="py-5 bg-dark text-light">
+        <div class="container text-center">
+            <h2 class="mb-4" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">Contact</h2>
+            <a href="https://instagram.com/ian_oon7" target="_blank" rel="noopener" class="d-inline-flex align-items-center justify-content-center gap-2 px-4 py-2 rounded-pill" style="background:#fff; color:#18181b; font-weight:600; font-size:1.2rem; text-decoration:none; box-shadow:0 2px 12px rgba(0,0,0,0.08); transition:background 0.2s;">
+                <svg width="24" height="24" fill="none" viewBox="0 0 448 512" style="vertical-align:middle;"><path fill="#18181b" d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.36-30.36C293.19,120,256,118.13,224,118.13s-69.19,1.87-94.35,13.17a54,54,0,0,0-30.36,30.36C120,162.81,118.13,200,118.13,232s1.87,69.19,13.17,94.35a54,54,0,0,0,30.36,30.36C162.81,392,200,393.87,232,393.87s69.19-1.87,94.35-13.17a54,54,0,0,0,30.36-30.36C392,349.19,393.87,312,393.87,280S392,162.81,348.71,161.66ZM224,338a82,82,0,1,1,82-82A82,82,0,0,1,224,338Zm85.4-148.6a19.2,19.2,0,1,1-19.2-19.2A19.2,19.2,0,0,1,309.4,189.4Z"/></svg>
+                @ian_oon7
+            </a>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 bg-dark text-light">
+        <small>
+            &copy; 2025 IanOon Photography. Some images may be licensed under <a href="https://creativecommons.org/licenses/by/4.0/" class="text-light text-decoration-underline" target="_blank" rel="noopener">Creative Commons BY 4.0</a>.
+        </small>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
