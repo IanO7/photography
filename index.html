@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IanOon Photography</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="collections.css">
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -138,96 +139,170 @@
             background: rgba(0, 0, 0, 0.3);
             z-index: 0;
         }
+        .signature-landing {
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+        }
+        .signature-photo {
+            width: 1100px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .landing-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .landing-btn {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: #18181b;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 0.85rem 2.2rem;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .landing-btn:hover {
+            background: #00c896;
+            color: #fff;
+        }
+        .about-modern {
+            text-align: left;
+            margin-top: 4rem;
+        }
+        .about-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #18181b;
+            position: relative;
+            display: inline-block;
+        }
+        .about-title .about-dot {
+            color: #00c896;
+            font-size: 2.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+        .about-desc {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1.2rem;
+            color: #444;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+        .type-cursor {
+            display: inline-block;
+            width: 1ch;
+            color: #00c896;
+            animation: blink 0.8s steps(1) infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar" id="main-navbar" style="display:none;">
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li>
+                <a href="https://instagram.com/your_instagram_username" target="_blank" rel="noopener" title="Instagram" style="padding:0 0.5rem;">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" class="insta-logo" style="width:28px;height:28px;vertical-align:middle;filter: invert(36%) sepia(99%) saturate(749%) hue-rotate(314deg) brightness(93%) contrast(92%);">
+                </a>
+            </li>
+        </ul>
+    </nav>
     <div class="landing-viewport">
-        <img src="static/Signature Profile Photo.png" alt="Ian Oon Signature" class="signature-img" draggable="false" oncontextmenu="return false;">
-        <div class="main-buttons">
-            <a href="#about" class="main-btn">About</a>
-            <a href="#gallery" class="main-btn">Gallery</a>
-            <a href="https://instagram.com/ian_oon7" target="_blank" rel="noopener" class="main-btn">
-                <svg class="insta-logo" fill="none" viewBox="0 0 448 512"><path fill="#fff" d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.36-30.36C293.19,120,256,118.13,224,118.13s-69.19,1.87-94.35,13.17a54,54,0,0,0-30.36,30.36C120,162.81,118.13,200,118.13,232s1.87,69.19,13.17,94.35a54,54,0,0,0,30.36,30.36C162.81,392,200,393.87,232,393.87s69.19-1.87,94.35-13.17a54,54,0,0,0,30.36-30.36C392,349.19,393.87,312,393.87,280S392,162.81,348.71,161.66ZM224,338a82,82,0,1,1,82-82A82,82,0,0,1,224,338Zm85.4-148.6a19.2,19.2,0,1,1-19.2-19.2A19.2,19.2,0,0,1,309.4,189.4Z"/></svg>
-            </a>
+        <div class="signature-landing">
+            <img src="static/Signature Profile Photo.png" alt="Signature Photo" class="signature-photo" />
+            <div class="landing-buttons">
+                <a href="#about" class="landing-btn">About Me</a>
+                <a href="#gallery" class="landing-btn">Gallery</a>
+                <a href="#contact" class="landing-btn">Contact</a>
+            </div>
         </div>
     </div>
 
     <section id="about" class="about-section">
-        <div class="container" style="max-width:1100px;">
-            <div style="display:flex; flex-wrap:wrap; align-items:center; gap:40px;">
-                <!-- Left side: Heading and text -->
-                <div style="flex:1 1 350px; min-width:280px;">
-                    <h2 style="
-                        font-family: 'Montserrat', sans-serif;
-                        font-size: 3.2rem;
-                        font-weight: 800;
-                        letter-spacing: 2px;
-                        color: #18181b;
-                        margin-bottom: 2rem;
-                    ">
-                        About Me
-                    </h2>
-                    <p style="
-                        font-family: 'Roboto', Arial, sans-serif;
-                        font-size: 1.35rem;
-                        color: #444;
-                        line-height: 1.8;
-                        background: #fff;
-                        border-radius: 18px;
-                        box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-                        padding: 2rem 2rem;
-                        margin: 0;
-                    ">
-                        Hi, I'm <strong>Ian Oon</strong>.<br>
-                        I’m passionate about capturing moments, stories, and beauty from around the world.<br>
-                        My photography is all about clean aesthetics, emotion, and timeless style.<br>
-                        Explore my work and discover the art behind every shot.
-                    </p>
-                </div>
-                <!-- Right side: Accent or image (optional, can be blank for minimal look) -->
-                <div style="flex:1 1 350px; min-width:280px; display:flex; justify-content:center; align-items:center;">
-                    <!-- You can add a portrait or accent here, or leave blank for whitespace -->
-                    <!-- Example: <img src="static/about-accent.png" alt="" style="max-width:320px; width:100%; border-radius:18px; box-shadow:0 4px 24px rgba(0,0,0,0.04);"> -->
-                </div>
-            </div>
+        <div style="max-width:700px; margin:0 auto; text-align:center;">
+            <h2 id="about-typewriter-title" style="font-family:'Montserrat',sans-serif; font-size:2.2rem; font-weight:700; color:#18181b; margin-bottom:1rem;">
+                <!-- Typewriter will fill this -->
+            </h2>
+            <p style="font-family:'Roboto',Arial,sans-serif; font-size:1.15rem; color:#444; line-height:1.7; margin:0;">
+                Hi, I'm <strong>Ian Oon</strong>.<br>
+                I’m passionate about capturing moments, stories, and beauty from around the world.<br>
+                My photography is all about clean aesthetics, emotion, and timeless style.<br>
+                Explore my work and discover the art behind every shot.
+            </p>
         </div>
     </section>
 
     <section id="gallery" class="gallery-section">
-        <div class="section-title">Gallery</div>
-        <div class="gallery-buttons">
-            <a href="city.html" class="gallery-card city-bg-blur">
-                <span class="gallery-card-text">City</span>
-            </a>
-            <a href="event.html" class="gallery-card event-bg-blur">
-                <span class="gallery-card-text">Event</span>
-            </a>
-            <a href="flower.html" class="gallery-card flower-bg-blur">
-                <span class="gallery-card-text">Flower</span>
-            </a>
-            <a href="food.html" class="gallery-card food-bg-blur">
-                <span class="gallery-card-text">Food</span>
-            </a>
-            <a href="landscape.html" class="gallery-card landscape-bg-blur">
-                <span class="gallery-card-text">Landscape</span>
-            </a>
-            <a href="penang.html" class="gallery-card penang-bg-blur">
-                <span class="gallery-card-text">Penang</span>
-            </a>
-            <a href="studio.html" class="gallery-card studio-bg-blur">
-                <span class="gallery-card-text">Studio</span>
-            </a>
-            <a href="editedphotoshop.html" class="gallery-card edited-bg-blur">
-                <span class="gallery-card-text">Edited / Photoshop</span>
-            </a>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title mb-4">Gallery</div>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                    <a href="city.html" class="gallery-card city-bg-blur flex-fill">
+                        <span class="gallery-card-text">City</span>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                    <a href="event.html" class="gallery-card event-bg-blur flex-fill">
+                        <span class="gallery-card-text">Event</span>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                    <a href="flower.html" class="gallery-card flower-bg-blur flex-fill">
+                        <span class="gallery-card-text">Blossoms</span>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                    <a href="food.html" class="gallery-card food-bg-blur flex-fill">
+                        <span class="gallery-card-text">Food</span>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                    <a href="landscape.html" class="gallery-card landscape-bg-blur flex-fill">
+                        <span class="gallery-card-text">Landscape</span>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                    <a href="penang.html" class="gallery-card penang-bg-blur flex-fill">
+                        <span class="gallery-card-text">Penang</span>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                    <a href="studio.html" class="gallery-card studio-bg-blur flex-fill">
+                        <span class="gallery-card-text">Studio</span>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                    <a href="editedphotoshop.html" class="gallery-card edited-bg-blur flex-fill">
+                        <span class="gallery-card-text">Edited / Photoshop</span>
+                    </a>
+                </div>
+            </div>
         </div>
+        
     </section>
-
-    <footer class="text-center py-4 bg-dark text-light">
-        <small>
-            &copy; 2025 IanOon Photography. Some images may be licensed under <a href="https://creativecommons.org/licenses/by/4.0/" class="text-light text-decoration-underline" target="_blank" rel="noopener">Creative Commons BY 4.0</a>.
-        </small>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
