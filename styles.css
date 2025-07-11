@@ -234,6 +234,232 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.about-section {
+    background: #f7f9fa;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-split {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 60px;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.about-heading {
+    flex: 1 1 300px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #18181b;
+    text-align: left;
+    line-height: 1.1;
+}
+
+.about-text {
+    flex: 2 1 400px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1.35rem;
+    color: #444;
+    line-height: 1.8;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+    padding: 2rem 2rem;
+    text-align: left;
+}
+
+.gallery-section {
+    background: #fff;
+    padding: 80px 0 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #18181b;
+    margin-bottom: 2.5rem;
+}
+
+.gallery-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.gallery-btn {
+    background: #18181b;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 0.85rem 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    display: inline-block;
+}
+
+.gallery-btn:hover, .gallery-btn:focus {
+    background: #00c896;
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(0,200,150,0.12);
+}
+
+.city-bg-blur {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    overflow: hidden;
+    background: none;
+    margin: 0 auto;
+}
+.city-bg-blur::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('static/city_images/Perth City.jpg') center center/cover no-repeat;
+    filter: blur(1px) brightness(1.2);
+    z-index: 0;
+    transition: filter 0.3s;
+}
+.city-bg-blur .gallery-card-text {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+}
+.city-bg-blur:hover::before {
+    filter: blur(6px) brightness(0.85);
+}
+.event-bg-blur, .flower-bg-blur, .food-bg-blur, .landscape-bg-blur, .penang-bg-blur, .studio-bg-blur, .edited-bg-blur {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    overflow: hidden;
+    background: none;
+    margin: 0 auto;
+}
+.event-bg-blur::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('static/event_images/event1.jpg') center center/cover no-repeat;
+    filter: blur(1px) brightness(1.2);
+    z-index: 0;
+    transition: filter 0.3s;
+}
+.flower-bg-blur::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('static/flower_images/Flower Copyright.jpg') center center/cover no-repeat;
+    filter: blur(1px) brightness(1.2);
+    z-index: 0;
+    transition: filter 0.3s;
+}
+.food-bg-blur::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('static/food_images/food1.jpg') center center/cover no-repeat;
+    filter: blur(1px) brightness(1.2);
+    z-index: 0;
+    transition: filter 0.3s;
+}
+.landscape-bg-blur::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('static/landscape_images/Lesmurdie Falls 1.jpg') center center/cover no-repeat;
+    filter: blur(1px) brightness(1.2);
+    z-index: 0;
+    transition: filter 0.3s;
+}
+.penang-bg-blur::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('static/penang_images/penang1.jpg') center center/cover no-repeat;
+    filter: blur(1px) brightness(1.2);
+    z-index: 0;
+    transition: filter 0.3s;
+}
+.studio-bg-blur::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('static/studio_images/Creative_Edit_with_Plum_4_Copyright_50.jpg') center center/cover no-repeat;
+    filter: blur(1px) brightness(1.2);
+    z-index: 0;
+    transition: filter 0.3s;
+}
+.edited-bg-blur::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('static/edited_images/Creative Streets Copyright.jpg') center center/cover no-repeat;
+    filter: blur(1px) brightness(1.2));
+    z-index: 0;
+    transition: filter 0.3s;
+}
+.event-bg-blur .gallery-card-text,
+.flower-bg-blur .gallery-card-text,
+.food-bg-blur .gallery-card-text,
+.landscape-bg-blur .gallery-card-text,
+.penang-bg-blur .gallery-card-text,
+.studio-bg-blur .gallery-card-text,
+.edited-bg-blur .gallery-card-text {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+}
+.event-bg-blur:hover::before,
+.flower-bg-blur:hover::before,
+.food-bg-blur:hover::before,
+.landscape-bg-blur:hover::before,
+.penang-bg-blur:hover::before,
+.studio-bg-blur:hover::before,
+.edited-bg-blur:hover::before {
+    filter: blur(6px) brightness(0.85);
+}
+
 @media (max-width: 991.98px) {
     .row.align-items-center.g-5 {
         gap: 2rem !important;
@@ -243,6 +469,23 @@ footer a:hover {
     }
     .col-md-6 img {
         margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-split {
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 10px;
+    }
+    .about-heading {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .about-text {
+        font-size: 1.1rem;
+        padding: 1.2rem 1rem;
+        text-align: center;
     }
 }
 
@@ -275,5 +518,15 @@ footer a:hover {
         font-size: 0.95rem;
         padding-left: 10px;
         padding-right: 10px;
+    }
+    .gallery-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .gallery-btn {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1rem;
     }
 }
