@@ -725,24 +725,6 @@ footer a:hover,
     }
 }
 
-/* Override heading and about styles to match collections.css */
-h1, h2, h3, h4, h5, h6,
-#about-typewriter-title,
-.cityscapes-heading {
-    font-family: 'Montserrat', Arial, sans-serif !important;
-    font-size: 2.2rem !important;
-    font-weight: 300 !important;
-    letter-spacing: 0.18em !important;
-    color: #222 !important;
-    background: #fff;
-    margin: 0 auto 0.5rem auto;
-    text-align: center;
-    line-height: 1.1;
-    padding: 0.3em 0.5em;
-    border-radius: 0.25em;
-    box-shadow: none;
-    text-transform: uppercase;
-}
 
 .about-section p,
 .about-desc {
