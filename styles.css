@@ -34,15 +34,11 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 200;
+    z-index: 1000;
+    display: none; /* Hidden by default, shown by JS */
     background: #fff;
-    color: #111;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.03);
-    display: none; /* JS will toggle this */
-    justify-content: center;
-    align-items: center;
-    transition: top 0.3s;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    transition: opacity 0.2s;
 }
 .logo {
     font-family: 'Montserrat', sans-serif;
@@ -74,8 +70,14 @@ body {
 }
 
 .dropdown-item {
-    color: var(--text-main) !important;
-    transition: background 0.2s, color 0.2s;
+    color: #222 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.08rem;
+    font-weight: 400;
+    padding: 12px 22px;
+    background: none !important;
+    border: none;
+    transition: background 0.18s, color 0.18s;
 }
 
 .dropdown-item:hover {
@@ -234,19 +236,8 @@ footer,
     font-size: 1rem;
 }
 
-footer a,
-.footer-fixed a {
-    color: #18181b !important;
-    text-decoration: underline;
-}
-
-footer a:hover,
-.footer-fixed a:hover {
-    color: #00b894 !important;
-}
-
 .about-section {
-    background: #f7f9fa;
+    min-height: 100vh; /* Ensures you have to scroll past it */
     padding: 100px 0;
 }
 
@@ -254,25 +245,20 @@ footer a:hover,
     max-width: 1100px;
 }
 
-.about-section h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3.2rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #18181b;
-    margin-bottom: 2rem;
-}
-
 .about-section p {
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 1.35rem;
-    color: #444;
-    line-height: 1.8;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    color: #222;
     background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-    padding: 2rem;
-    margin: 0;
+    margin: 0 auto 0.5rem auto;
+    text-align: center;
+    line-height: 1.1;
+    padding: 0.3em 0.5em;
+    border-radius: 0.25em;
+    box-shadow: none;
+    text-transform: uppercase;
 }
 
 .about-split {
@@ -284,57 +270,7 @@ footer a:hover,
     padding: 0 40px;
 }
 
-.about-heading {
-    flex: 1 1 300px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    color: #18181b;
-    text-align: left;
-    line-height: 1.1;
-}
 
-.about-text {
-    flex: 2 1 400px;
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 1.35rem;
-    color: #444;
-    line-height: 1.8;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-    padding: 2rem 2rem;
-    text-align: left;
-}
-
-.about-modern {
-    max-width: 540px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 48px 24px 56px 24px;
-    background: #fff;
-    border-radius: 22px;
-    box-shadow: 0 4px 32px rgba(0,0,0,0.06);
-}
-
-.about-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #18181b;
-    position: relative;
-    display: inline-block;
-}
-
-.about-title .about-dot {
-    color: #00c896;
-    font-size: 2.5rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-}
 
 .about-desc {
     font-family: 'Roboto', Arial, sans-serif;
@@ -445,24 +381,16 @@ footer a:hover,
     cursor: pointer;
     line-height: 1.1;
     transition: color 0.18s;
-}
-
-.landing-btn:hover,
-.landing-btn:focus {
-    color: #00b894;
-    text-decoration: underline;
+    display: inline-block;
 }
 
 /* Separator | between buttons except last */
 .landing-btn:not(:last-child)::after {
-    content: '|';
-    color: #bbb;
-    margin-left: 0.7em;
-    margin-right: 0;
-    font-weight: 300;
-    font-size: 1em;
-    letter-spacing: 0;
+    content: '';
+    /* Remove the vertical bar separator */
 }
+
+/* Remove any previous .landing-btn styles that add background, border, border-radius, or box-shadow */
 
 @keyframes fadeInUp {
     to {
@@ -476,9 +404,6 @@ footer a:hover,
     }
 }
 
-/* --- Add or update these styles at the end of styles.css --- */
-
-/* Restyle About Me, Gallery, and Contact buttons for a cleaner look */
 .landing-buttons,
 .main-buttons {
     gap: 1.5rem;
@@ -491,21 +416,14 @@ footer a:hover,
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    background: #18181b;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
     padding: 0.85rem 2.2rem;
-    text-decoration: none;
     transition: background 0.2s, color 0.2s;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     display: inline-block;
 }
 
 .landing-btn:hover,
 .main-btn:hover {
-    background: #00b894;
-    color: #fff;
+    color: grey;
 }
 
 .section-title,
@@ -531,15 +449,16 @@ footer a:hover,
 .about-desc {
     font-family: 'Montserrat', Arial, sans-serif !important;
     font-size: 1.08rem !important;
-    font-weight: 400 !important;
-    color: #444 !important;
-    letter-spacing: 0.02em;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-    padding: 2rem;
+    font-weight: 300 !important;
+    color: #222 !important;
+    letter-spacing: 0.18em;
+    background: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
     margin: 0;
     line-height: 1.7;
+    text-align: center;
 }
 
 @media (max-width: 991.98px) {
@@ -749,15 +668,16 @@ footer a:hover,
 .about-desc {
     font-family: 'Montserrat', Arial, sans-serif !important;
     font-size: 1.08rem !important;
-    font-weight: 400 !important;
-    color: #444 !important;
-    letter-spacing: 0.02em;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-    padding: 2rem;
+    font-weight: 300 !important;
+    color: #222 !important;
+    letter-spacing: 0.18em;
+    background: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
     margin: 0;
     line-height: 1.7;
+    text-align: center;
 }
 
 .city-bg-blur {

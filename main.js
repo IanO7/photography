@@ -34,19 +34,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Sticky navbar
     const navbar = document.getElementById('main-navbar');
-    const landingButtons = document.querySelector('.landing-buttons');
+    const aboutSection = document.getElementById('about');
 
-    function checkNavbar() {
-        if (!navbar || !landingButtons) return;
-        const buttonsBottom = landingButtons.getBoundingClientRect().bottom;
-        if (buttonsBottom <= 0) {
+    function toggleNavbar() {
+        if (!navbar || !aboutSection) return;
+        // Get the bottom position of About section relative to viewport
+        const aboutBottom = aboutSection.getBoundingClientRect().bottom;
+        // Show navbar when About section is scrolled out of view (bottom <= 0)
+        if (aboutBottom <= 0) {
             navbar.style.display = 'flex';
         } else {
             navbar.style.display = 'none';
         }
     }
 
-    window.addEventListener('scroll', checkNavbar);
-    window.addEventListener('resize', checkNavbar);
-    checkNavbar();
+    navbar.style.display = 'none'; // Hide on load
+    window.addEventListener('scroll', toggleNavbar);
+    window.addEventListener('resize', toggleNavbar);
+    toggleNavbar();
 });
