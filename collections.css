@@ -89,6 +89,9 @@ body {
     margin-top: 0.5rem;
     box-shadow: 0 4px 24px rgba(0,0,0,0.07);
     border: 1px solid #eee;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.08rem;
+    padding: 0.5rem 0;
 }
 .dropdown-item {
     color: #222 !important;
@@ -97,11 +100,52 @@ body {
     padding: 10px 18px;
     transition: color 0.18s, background 0.18s;
     background: none !important;
+    padding: 12px 22px;
+    font-size: 1.08rem;
+    font-weight: 400;
+    color: #222 !important;
+    background: none !important;
+    border: none;
+    transition: background 0.18s, color 0.18s;
 }
 .dropdown-item:hover {
     color: #222 !important;              /* Keep text dark */
-    background: #f5f5f5 !important;      /* Subtle light grey background */
+    color: #00b894 !important;
 }
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    right: 100%;           /* Position to the left of parent */
+    left: auto;            /* Remove left positioning */
+    margin-top: -8px;
+    margin-right: 2px;
+    border-radius: 10px;
+    min-width: 180px;
+    display: none;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+}
+
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu > .dropdown-toggle::after {
+    content: "▶";
+    float: right;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+}
+
+.bi-list {
+    font-size: 2.2rem !important;
+    color: #222;
+    vertical-align: middle;
+}
+
 .gallery-img,
 .gallery-img-portrait {
     width: 100%;
