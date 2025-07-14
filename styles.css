@@ -22,7 +22,7 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    background: var(--section-bg-alt);
+    background: #fff;
     color: var(--text-main);
     min-height: 100vh;
 }
@@ -246,19 +246,32 @@ footer a:hover,
 }
 
 .about-section {
-    background: none;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #f7f9fa;
+    padding: 100px 0;
+}
+
+.about-section .container {
+    max-width: 1100px;
+}
+
+.about-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #18181b;
+    margin-bottom: 2rem;
 }
 
 .about-section p {
-    background: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    padding: 0 !important;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1.35rem;
+    color: #444;
+    line-height: 1.8;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+    padding: 2rem;
     margin: 0;
 }
 
@@ -307,214 +320,82 @@ footer a:hover,
 
 .about-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 900;   
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #18181b;
-    letter-spacing: 1px;
-    margin-bottom: 1.2rem;
-    line-height: 1;
+    position: relative;
+    display: inline-block;
 }
 
-.about-dot {
+.about-title .about-dot {
     color: #00c896;
-    font-size: 1em;
-    margin-left: 2px;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
 }
 
 .about-desc {
     font-family: 'Roboto', Arial, sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: #444;
-    line-height: 1.7;
-    margin: 0;
+    line-height: 1.6;
+    margin-top: 1rem;
 }
 
 .gallery-section {
-    background: #fff;
-    padding: 80px 0 60px 0;
+    padding: 60px 0;
     text-align: center;
 }
 
-.section-title {
+.gallery-section .section-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    margin-bottom: 2rem;
     color: #18181b;
-    margin-bottom: 2.5rem;
 }
 
 .gallery-buttons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1.5rem;
-    justify-items: center;
-    margin-top: 2rem;
 }
 
-.gallery-btn {
-    background: #18181b;
+.gallery-card {
+    position: relative;
+    display: block;
+    padding: 1.5rem;
+    border-radius: 12px;
     color: #fff;
-    border: none;
-    border-radius: 30px;
-    padding: 0.85rem 2.2rem;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
     text-decoration: none;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-    display: inline-block;
-}
-
-.gallery-btn:hover, .gallery-btn:focus {
-    background: #00c896;
-    color: #fff;
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 6px 24px rgba(0,200,150,0.12);
-}
-
-.city-bg-blur {
-    position: relative;
-    width: 220px;
-    height: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
     overflow: hidden;
-    background: none;
-    margin: 0 auto;
+    transition: transform 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
-.city-bg-blur::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('static/city_images/Perth City.jpg') center center/cover no-repeat;
-    filter: blur(1px) brightness(1.2);
-    z-index: 0;
-    transition: filter 0.3s;
+
+.gallery-card:hover {
+    transform: translateY(-5px);
 }
-.city-bg-blur .gallery-card-text {
+
+.gallery-card-text {
     position: relative;
     z-index: 1;
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #fff;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
-    letter-spacing: 1px;
-    text-align: center;
-    width: 100%;
-}
-.city-bg-blur:hover::before {
-    filter: blur(6px) brightness(0.85);
-}
-.event-bg-blur, .flower-bg-blur, .food-bg-blur, .landscape-bg-blur, .penang-bg-blur, .studio-bg-blur, .edited-bg-blur {
-    position: relative;
-    width: 220px;
-    height: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
-    overflow: hidden;
-    background: none;
-    margin: 0 auto;
-}
-.event-bg-blur::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('static/event_images/event1.jpg') center center/cover no-repeat;
-    filter: blur(1px) brightness(1.2);
-    z-index: 0;
-    transition: filter 0.3s;
-}
-.flower-bg-blur::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('static/flower_images/Flower Copyright.jpg') center center/cover no-repeat;
-    filter: blur(1px) brightness(1.2);
-    z-index: 0;
-    transition: filter 0.3s;
-}
-.food-bg-blur::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('static/food_images/food1.jpg') center center/cover no-repeat;
-    filter: blur(1px) brightness(1.2);
-    z-index: 0;
-    transition: filter 0.3s;
-}
-.landscape-bg-blur::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('static/landscape_images/Lesmurdie Falls 1.jpg') center center/cover no-repeat;
-    filter: blur(1px) brightness(1.2);
-    z-index: 0;
-    transition: filter 0.3s;
-}
-.penang-bg-blur::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('static/penang_images/penang1.jpg') center center/cover no-repeat;
-    filter: blur(1px) brightness(1.2);
-    z-index: 0;
-    transition: filter 0.3s;
-}
-.studio-bg-blur::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('static/studio_images/Creative_Edit_with_Plum_4_Copyright_50.jpg') center center/cover no-repeat;
-    filter: blur(1px) brightness(1.2);
-    z-index: 0;
-    transition: filter 0.3s;
-}
-.edited-bg-blur::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('static/edited_images/Creative Streets Copyright.jpg') center center/cover no-repeat;
-    filter: blur(1px) brightness(1.2));
-    z-index: 0;
-    transition: filter 0.3s;
-}
-.event-bg-blur .gallery-card-text,
-.flower-bg-blur .gallery-card-text,
-.food-bg-blur .gallery-card-text,
-.landscape-bg-blur .gallery-card-text,
-.penang-bg-blur .gallery-card-text,
-.studio-bg-blur .gallery-card-text,
-.edited-bg-blur .gallery-card-text {
-    position: relative;
-    z-index: 1;
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #fff;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
-    letter-spacing: 1px;
-    text-align: center;
-    width: 100%;
-}
-.event-bg-blur:hover::before,
-.flower-bg-blur:hover::before,
-.food-bg-blur:hover::before,
-.landscape-bg-blur:hover::before,
-.penang-bg-blur:hover::before,
-.studio-bg-blur:hover::before,
-.edited-bg-blur:hover::before {
-    filter: blur(6px) brightness(0.85);
 }
 
-/* Signature landing animation */
+.gallery-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
 .signature-landing {
     display: flex;
     flex-direction: column;
@@ -526,35 +407,42 @@ footer a:hover,
     animation: fadeInUp 1.2s cubic-bezier(.4,1.4,.6,1) 0.2s forwards;
     z-index: 3;
     position: relative;
+    text-align: center;
+    padding: 100px 0;
 }
 
+.signature-photo {
+    width: 1100px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .landing-buttons {
     display: flex;
+    justify-content: center;
     gap: 1.5rem;
-    opacity: 0;
-    animation: fadeIn 1s 1s forwards;
 }
 
 .landing-btn {
-    background: var(--btn-bg);
-    color: var(--btn-text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: #18181b;
+    color: #fff;
     border: none;
     border-radius: 30px;
-    padding: 0.9rem 2.2rem;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    padding: 0.85rem 2.2rem;
     text-decoration: none;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-    cursor: pointer;
+    transition: background 0.2s;
 }
+
 .landing-btn:hover {
-    background: var(--btn-bg-hover);
+    background: #00c896;
     color: #fff;
-    transform: translateY(-2px) scale(1.04);
 }
 
 @keyframes fadeInUp {
@@ -567,6 +455,72 @@ footer a:hover,
     to {
         opacity: 1;
     }
+}
+
+/* --- Add or update these styles at the end of styles.css --- */
+
+/* Restyle About Me, Gallery, and Contact buttons for a cleaner look */
+.landing-buttons,
+.main-buttons {
+    gap: 1.5rem;
+}
+
+.landing-btn,
+.main-btn {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: #18181b;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 0.85rem 2.2rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: inline-block;
+}
+
+.landing-btn:hover,
+.main-btn:hover {
+    background: #00b894;
+    color: #fff;
+}
+
+.section-title,
+.gallery-section .section-title,
+.about-section h2,
+#about-typewriter-title {
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.18em !important;
+    color: #222 !important;
+    background: #fff;
+    margin: 0 auto 0.5rem auto;
+    text-align: center;
+    line-height: 1.1;
+    padding: 0.3em 0.5em;
+    border-radius: 0.25em;
+    box-shadow: none;
+    text-transform: uppercase;
+}
+
+.about-section p,
+.about-desc {
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    font-size: 1.08rem !important;
+    font-weight: 400 !important;
+    color: #444 !important;
+    letter-spacing: 0.02em;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+    padding: 2rem;
+    margin: 0;
+    line-height: 1.7;
 }
 
 @media (max-width: 991.98px) {
@@ -705,4 +659,102 @@ footer a:hover,
     .gallery-img { aspect-ratio: 16/9; }
     .navbar { flex-direction: column; gap: 1rem; }
     .nav-links { gap: 1.2rem; }
+}
+
+@media (max-width: 600px) {
+    .signature-img {
+        max-width: 98vw;
+    }
+    .main-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        bottom: 5vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .tagline {
+        font-size: 1rem;
+    }
+    .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .btn {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    footer {
+        font-size: 0.95rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .gallery-buttons {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .gallery-card,
+    .city-bg-blur,
+    .event-bg-blur,
+    .flower-bg-blur,
+    .food-bg-blur,
+    .landscape-bg-blur,
+    .penang-bg-blur,
+    .studio-bg-blur,
+    .edited-bg-blur {
+        width: 90vw;
+        max-width: 340px;
+        height: 120px;
+    }
+}
+
+/* Override heading and about styles to match collections.css */
+h1, h2, h3, h4, h5, h6,
+#about-typewriter-title,
+.cityscapes-heading {
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.18em !important;
+    color: #222 !important;
+    background: #fff;
+    margin: 0 auto 0.5rem auto;
+    text-align: center;
+    line-height: 1.1;
+    padding: 0.3em 0.5em;
+    border-radius: 0.25em;
+    box-shadow: none;
+    text-transform: uppercase;
+}
+
+.about-section p,
+.about-desc {
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    font-size: 1.08rem !important;
+    font-weight: 400 !important;
+    color: #444 !important;
+    letter-spacing: 0.02em;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+    padding: 2rem;
+    margin: 0;
+    line-height: 1.7;
 }

@@ -1,59 +1,68 @@
-.navbar {
-    background: #fff;
-    color: #111;
-    padding: 0.7rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.03);
-    position: relative;
+body {
+    background: #fff; /* Changed from #fafbfc to pure white */
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #222;
+    margin: 0;
 }
-.logo {
-    display: none; /* Hide logo for minimalist look */
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 4rem 0.8rem 4rem; /* Increased left and right padding */
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-logo img {
+    height: 48px;
+    width: auto;
+}
+
+.navbar {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+    box-shadow: none;
+    border-bottom: none;
+    padding: 0;
+    margin-left: auto;
 }
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 0;
+    gap: 2.2rem; /* more space between links */
     margin: 0;
     padding: 0;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-.nav-links > li {
-    position: relative;
-    display: flex;
-    align-items: center;
+    justify-content: flex-end;
+    width: auto;
 }
 .nav-links > li:not(:last-child)::after {
-    content: "|";
-    color: #bbb;
-    margin: 0 1.1rem;
-    font-weight: 400;
-    font-size: 1.1rem;
-    letter-spacing: 0;
+    content: "";
+    margin: 0;
 }
 .nav-links a,
 .nav-link.dropdown-toggle {
-    color: #111 !important;
+    color: #222 !important;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 1.05rem;
-    letter-spacing: 0.5px;
-    transition: color 0.18s, border-bottom 0.18s;
-    padding: 6px 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500; /* thin and classy */
+    font-size: 1.18rem;
+    letter-spacing: 1.2px;
+    transition: color 0.18s;
+    padding: 4px 0;
     background: none !important;
-    border-bottom: 2px solid transparent;
+    border-bottom: none;
 }
 .nav-links a:hover,
 .nav-link.dropdown-toggle:hover,
 .dropdown-item:hover {
     color: #00b894 !important;
-    border-bottom: 2px solid #00b894;
     background: none !important;
+    border-bottom: none;
 }
 .dropdown-menu {
     background: #fff;
@@ -64,21 +73,16 @@
     border: 1px solid #eee;
 }
 .dropdown-item {
-    color: #111 !important;
+    color: #222 !important;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     padding: 10px 18px;
     transition: color 0.18s, background 0.18s;
     background: none !important;
 }
-.dropdown-item.active,
-.dropdown-item:active {
-    color: #00b894 !important;
-    background: #f5f5f5 !important;
-}
 .dropdown-item:hover {
-    color: #00b894 !important;
-    background: #f5f5f5 !important;
+    color: #222 !important;              /* Keep text dark */
+    background: #f5f5f5 !important;      /* Subtle light grey background */
 }
 .gallery-img,
 .gallery-img-portrait {
@@ -106,4 +110,203 @@
     .nav-links > li:not(:last-child)::after {
         margin: 0 0.5rem;
     }
+}
+
+.gallery-section {
+    padding: 0.5rem 0 0 0;    /* Remove bottom padding */
+}
+
+.gallery-grid {
+    display: flex;
+    flex-direction: column;   /* Stack items vertically */
+    align-items: center;      /* Center image horizontally */
+    gap: 0;                   /* No gap needed for single image */
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    background: #eee;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 575.98px) {
+    .hero-content {
+        padding: 1.2rem 0 0.2rem 0;
+    }
+    .gallery-section {
+        padding: 0.2rem 0 0 0;
+    }
+    .gallery-grid {
+        max-width: 100%;
+        padding: 0 0.5rem;
+    }
+    .gallery-item {
+        max-width: 100%;
+    }
+    .gallery-item img {
+        max-width: 100%;
+    }
+}
+
+/* Optional: Make headings use Montserrat too */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-icons a {
+    color: #222;
+    font-size: 1.6rem;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.navbar-icons a:hover {
+    color: #00b894;
+}
+
+.hero-section {
+    position: relative;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    filter: blur(2px) brightness(0.8);
+    z-index: 1;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.95) 100%);
+    z-index: 2;
+}
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 2rem 0 0.5rem 0; /* Reduce bottom padding */
+    margin-bottom: 0;         /* Remove extra margin */
+    width: 100%;
+    background: #fff; /* Ensure white background for heading section */
+}
+.hero-content h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+.hero-content .subtitle {
+    font-size: 1.1rem;
+    color: #888;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.5px;
+}
+.cityscapes-heading {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    color: #222;
+    background: #fff;
+    margin: 0 auto 0.5rem auto;
+    text-align: center;
+    line-height: 1.1;
+    padding: 0.3em 0.5em;
+    border-radius: 0.25em;
+    box-shadow: none;
+    text-transform: uppercase;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 0.5rem;
+}
+.nav-center a {
+    color: #222;
+    font-weight: 500;
+    font-size: 1.08rem;
+    text-decoration: none;
+    transition: color 0.18s;
+}
+.nav-center a:hover {
+    color: #00b894;
+}
+
+.gallery-section {
+    padding: 0.5rem 0 1rem 0;     /* Less top padding */
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0; /* No rounded corners */
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    background: #eee;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+}
+.gallery-item img:hover {
+    transform: scale(1.025);
+    box-shadow: 0 8px 32px rgba(0,200,150,0.10);
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+
+footer {
+    position: static;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    color: #888;
+    font-size: 0.95rem;
+    border-top: 1px solid #eee;
+}
+
+.gallery-img-portrait {
+    width: auto;
+    max-width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
