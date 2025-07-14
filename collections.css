@@ -96,20 +96,14 @@ body {
 .dropdown-item {
     color: #222 !important;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    padding: 10px 18px;
-    transition: color 0.18s, background 0.18s;
-    background: none !important;
-    padding: 12px 22px;
     font-size: 1.08rem;
     font-weight: 400;
-    color: #222 !important;
+    padding: 12px 22px;
     background: none !important;
     border: none;
     transition: background 0.18s, color 0.18s;
 }
 .dropdown-item:hover {
-    color: #222 !important;              /* Keep text dark */
     color: #00b894 !important;
 }
 .dropdown-submenu {

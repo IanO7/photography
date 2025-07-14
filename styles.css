@@ -424,25 +424,44 @@ footer a:hover,
 .landing-buttons {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 0;
 }
 
 .landing-btn {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    background: #18181b;
-    color: #fff;
+    background: none;
     border: none;
-    border-radius: 30px;
-    padding: 0.85rem 2.2rem;
+    border-radius: 0;
+    color: #222;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
     text-decoration: none;
-    transition: background 0.2s;
+    padding: 0 0.7em;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    line-height: 1.1;
+    transition: color 0.18s;
 }
 
-.landing-btn:hover {
-    background: #00c896;
-    color: #fff;
+.landing-btn:hover,
+.landing-btn:focus {
+    color: #00b894;
+    text-decoration: underline;
+}
+
+/* Separator | between buttons except last */
+.landing-btn:not(:last-child)::after {
+    content: '|';
+    color: #bbb;
+    margin-left: 0.7em;
+    margin-right: 0;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 0;
 }
 
 @keyframes fadeInUp {
@@ -739,4 +758,45 @@ footer a:hover,
     padding: 2rem;
     margin: 0;
     line-height: 1.7;
+}
+
+.city-bg-blur {
+    background-image: url('static/city_images/Perth\ City.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.event-bg-blur {
+    background-image: url('static/event.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.flower-bg-blur {
+    background-image: url('static/flower_images/Flower\ Copyright.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.food-bg-blur {
+    background-image: url('static/food_images/Roast_Copyright_50.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.landscape-bg-blur {
+    background-image: url('static/landscape_images/Lesmurdie\ Falls\ 1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.penang-bg-blur {
+    background-image: url('static/penang_images/Old_Heritage_Building_Copyright_50.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.studio-bg-blur {
+    background-image: url('static/studio_images/Creative_Edit_with_Plum_4_Copyright_50.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.edited-bg-blur {
+    background-image: url('static/edited_images/Creative\ Streets\ Copyright.jpg');
+    background-size: cover;
+    background-position: center;
 }
