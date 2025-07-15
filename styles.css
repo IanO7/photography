@@ -261,8 +261,15 @@ footer,
 }
 
 .gallery-card-text {
-    position: relative;
-    z-index: 1;
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    width: 100%;
+    display: block;
 }
 
 .gallery-card::after {
@@ -560,7 +567,7 @@ footer,
     background-position: center;
 }
 .event-bg-blur {
-    background-image: url('static/event.jpg');
+    background-image: url('static/event_images/IMG_2919_50.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -591,6 +598,11 @@ footer,
 }
 .edited-bg-blur {
     background-image: url('static/edited_images/Creative\ Streets\ Copyright.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.skyscapes-bg-blur {
+    background-image: url('static/skyscapes_images/Sky\ Copyright.jpg');
     background-size: cover;
     background-position: center;
 }
