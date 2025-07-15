@@ -27,63 +27,15 @@ body {
     min-height: 100vh;
 }
 
-/* Sticky navbar styles */
-/* filepath: c:\Users\Admin\Desktop\photography\styles.css */
-#main-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    display: none; /* Hidden by default, shown by JS */
-    background: #fff;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-    transition: opacity 0.2s;
-}
+
 .logo {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: #00c896;
 }
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-.nav-links a:hover {
-    color: #00c896;
-}
 
-.dropdown-menu {
-    background: var(--section-bg);
-    border-radius: 8px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-}
 
-.dropdown-item {
-    color: #222 !important;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.08rem;
-    font-weight: 400;
-    padding: 12px 22px;
-    background: none !important;
-    border: none;
-    transition: background 0.18s, color 0.18s;
-}
-
-.dropdown-item:hover {
-    background: var(--highlight);
-    color: #fff !important;
-}
 
 .hero {
     position: relative;
@@ -271,14 +223,6 @@ footer,
 }
 
 
-
-.about-desc {
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 1.2rem;
-    color: #444;
-    line-height: 1.6;
-    margin-top: 1rem;
-}
 
 .gallery-section {
     padding: 60px 0;
@@ -608,76 +552,6 @@ footer,
         gap: 1rem;
         bottom: 5vh;
     }
-}
-
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.75rem 1rem;
-    }
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .tagline {
-        font-size: 1rem;
-    }
-    .container {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-    }
-    .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        text-align: center;
-    }
-    .btn {
-        width: 100%;
-        margin-top: 1rem;
-    }
-    footer {
-        font-size: 0.95rem;
-        padding-left: 10px;
-        padding-right: 10px;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-    }
-    .gallery-buttons {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    .gallery-card,
-    .city-bg-blur,
-    .event-bg-blur,
-    .flower-bg-blur,
-    .food-bg-blur,
-    .landscape-bg-blur,
-    .penang-bg-blur,
-    .studio-bg-blur,
-    .edited-bg-blur {
-        width: 90vw;
-        max-width: 340px;
-        height: 120px;
-    }
-}
-
-
-.about-section p,
-.about-desc {
-    font-family: 'Montserrat', Arial, sans-serif !important;
-    font-size: 1.08rem !important;
-    font-weight: 300 !important;
-    color: #222 !important;
-    letter-spacing: 0.18em;
-    background: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0;
-    line-height: 1.7;
-    text-align: center;
 }
 
 .city-bg-blur {

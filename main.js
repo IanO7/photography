@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function toggleNavbar() {
         if (!navbar || !aboutSection) return;
-        // Get the bottom position of About section relative to viewport
-        const aboutBottom = aboutSection.getBoundingClientRect().bottom;
-        // Show navbar when About section is scrolled out of view (bottom <= 0)
-        if (aboutBottom <= 0) {
+        // Get the top position of About section relative to viewport
+        const aboutTop = aboutSection.getBoundingClientRect().top;
+        // Show navbar when About section reaches top of viewport or above
+        if (aboutTop <= 0) {
             navbar.style.display = 'flex';
         } else {
             navbar.style.display = 'none';
