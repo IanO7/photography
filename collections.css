@@ -78,7 +78,7 @@ body {
 .nav-links a:hover,
 .nav-link.dropdown-toggle:hover,
 .dropdown-item:hover {
-    color: #00b894 !important;
+    color: grey !important;
     background: none !important;
     border-bottom: none;
 }
@@ -104,7 +104,7 @@ body {
     transition: background 0.18s, color 0.18s;
 }
 .dropdown-item:hover {
-    color: #00b894 !important;
+    color: grey !important;
 }
 .dropdown-submenu {
     position: relative;
@@ -237,7 +237,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: color 0.2s;
 }
 .navbar-icons a:hover {
-    color: #00b894;
+    color: grey;
 }
 
 .hero-section {
@@ -313,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: color 0.18s;
 }
 .nav-center a:hover {
-    color: #00b894;
+    color: grey;
 }
 
 .gallery-section {
