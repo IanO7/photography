@@ -504,6 +504,7 @@ footer,
     }
 }
 
+
 .gallery-card,
 .city-bg-blur,
 .event-bg-blur,
@@ -602,6 +603,24 @@ footer,
 }
 .skyscapes-bg-blur {
     background-image: url('static/skyscapes_images/Sky\ Copyright.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.advertisement-bg-blur {
+    background-image: url('static/advertisement_images/1\ Copyright.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.architecture-bg-blur {
+    background-image: url('static/architecture_images/Thai\ Restaurant\ Copyright.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.people-bg-blur {
+    background-image: url('static/people_images/Taipei Main Station on January 1 Copyright.JPG');
     background-size: cover;
     background-position: center;
 }
